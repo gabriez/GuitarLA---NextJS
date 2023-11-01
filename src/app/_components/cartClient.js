@@ -2,6 +2,7 @@
 import LayoutContent from '@/app/_components/layout'
 import { useCartContext } from "@/context/contextCart";
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 import styles from '@/app/styles/cart.module.css'
 
 const CartClient = () => {
@@ -25,7 +26,7 @@ const CartClient = () => {
                     cartItems?.map( producto => (
                     <div className={styles.producto} key={producto.id}>
                         <div>
-                            <img src={producto.image} alt={`Imagen del producto ${producto.name}`} />
+                            <Image src={producto.image} width={1000} height={1000} alt={`Imagen del producto ${producto.name}`} />
                         </div>
                         <div>
                             <p className={styles.nombre}>{producto.name}</p>
