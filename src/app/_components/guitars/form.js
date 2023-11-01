@@ -1,12 +1,12 @@
 "use client";
 import { useCartContext } from "@/context/contextCart";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Form = ({guitarData}) => {
   const [quantity, setQuantity] = useState(0)
   const {dispatch} = useCartContext();
-
+  const router = useRouter();
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -24,8 +24,8 @@ const Form = ({guitarData}) => {
       item: cartItem
     });
 
-    return redirect('/cart')
-
+    router.push('/cart');
+    // console.log('/cart')
   }
   return (
     <form onSubmit={handleSubmit} className="formulario">

@@ -1,3 +1,4 @@
+'use server'
 import Form from "@/app/_components/guitars/form";
 import { getGuitar} from "@/app/_lib/api_helper";
 import LayoutContent from "@/app/_components/layout";
