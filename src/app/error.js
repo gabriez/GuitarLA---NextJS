@@ -9,7 +9,7 @@ export default function Error({ error, reset}) {
   }, [error])
  
   return (
-    <div className='contenedor contenido'>
+    <div className='contenedor contenido error'>
         <h2 className='heading'>¡Algo salió mal!</h2>
         <p> {error.message} </p>
         <button className='btn-notFound'
