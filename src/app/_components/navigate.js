@@ -12,7 +12,7 @@ const Navigate = () => {
     }
 
   return (
-    <div className="navegacion">
+    <nav className="navegacion">
         <Link href='/' className={setActive('/')}>Inicio</Link>
         <Link href='/nosotros' className={setActive('/nosotros')}>Nosotros</Link>
         <Link href='/guitarras' className={setActive('/guitarras')}>Tienda</Link>
@@ -21,7 +21,7 @@ const Navigate = () => {
           <Image width={20} height={20} src='/img/carrito.png' alt="Carrito"/>
         </Link>
         
-    </div>
+    </nav>
   )
 }
 
