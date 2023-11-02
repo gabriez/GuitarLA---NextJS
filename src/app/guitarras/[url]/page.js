@@ -35,7 +35,6 @@ const GuitarUrl = async ({params}) => {
     <main className="contenedor guitarra">
       <img src={imageDestructured} alt={`Imagen de la guitarra ${name}`} className="imagen" /> 
       <LayoutContent title={name} conditional={'main'}>
-        <h3>{name}</h3> 
         <p className="texto"> {description} </p> 
         <p className="price"> ${price} </p> 
         <Form guitarData={dataForm}/>
