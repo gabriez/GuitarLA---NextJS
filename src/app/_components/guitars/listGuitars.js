@@ -16,11 +16,12 @@ const ListGuitars = ({guitars}) => {
                   return (
                     <div className="guitarra" key={guitarra?.id}>
                       <Image width={1000} height={1000} src={showImage} alt={`Imagen de ${guitarra?.attributes.name}`} />
-                      <LayoutContent title={guitarra?.attributes.name} conditional={'div'}>
+                      <main className="contenido">
+                          <h3> {guitarra?.attributes.name}</h3>
                           <p className="description">{guitarra?.attributes.description}</p>
                           <p className="price">${guitarra?.attributes.price}</p>
                           <Link className="enlace" href={`/guitarras/${guitarra?.attributes.url}`}> Ver Producto </Link>
-                      </LayoutContent>
+                      </main>
                     </div>
                   )
                 })

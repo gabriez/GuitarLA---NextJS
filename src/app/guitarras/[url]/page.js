@@ -1,7 +1,6 @@
 'use server'
 import Form from "@/app/_components/guitars/form";
 import { getGuitar} from "@/app/_lib/api_helper";
-import LayoutContent from "@/app/_components/layout";
 import { notFound } from "next/navigation";
 
 
@@ -34,11 +33,12 @@ const GuitarUrl = async ({params}) => {
   return (
     <main className="contenedor guitarra">
       <img src={imageDestructured} alt={`Imagen de la guitarra ${name}`} className="imagen" /> 
-      <LayoutContent title={name} conditional={'main'}>
+      <main className="contenido">
+        <h3> {name} </h3>
         <p className="texto"> {description} </p> 
         <p className="price"> ${price} </p> 
         <Form guitarData={dataForm}/>
-      </LayoutContent>
+      </main>
     </main>
   )
 }
